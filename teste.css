@@ -1,0 +1,91 @@
+body{
+    font-family:'Open Sans';
+    color: rgba(0,0,0,0.8);
+}
+
+img{
+        border-radius: 25px;
+}
+.painel {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+}
+
+.container{
+    margin: 60px 0;
+    width: 500px;
+    height: 500px;
+}
+
+.rotation{
+    cursor: all-scroll  ;
+    height: 100% !important;
+    max-width: 100% !important;
+    margin: auto;
+
+}
+
+.rotation > img{
+
+}
+.caixao{
+    width: 200px;
+    cursor: pointer;
+    border: 2px solid rgba(255,0,0,0.6);
+    background: none;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease;
+}
+
+.caixao:hover{
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    background: rgba(255,0,0,0.3);
+}
+
+.caixao:focus{
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+    background: rgba(255,0,0,.5);
+    outline:0;
+}
+
+
+.caixa > img{
+    max-width: 100px;
+    /* border: 2px solid rgba(255,0,0,0.6); */
+    border-radius: 25px;
+    margin: 0 15px;
+    padding: 15px;
+    max-height: 100px;
+}
+
+.caixa > h2{
+    margin: 0px 10px 10px 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+    .container{
+        width: 400px;
+        height: 400px;
+    }
+    .caixao{
+        width:150px;
+    }
+
+    .caixa > img{
+        max-width: 75px;
+    }
+    .caixa > h2{
+        font-size: 14px;
+        margin: 0px 5px 5px 5px;
+    }
+
+}
