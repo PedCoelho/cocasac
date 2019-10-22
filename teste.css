@@ -1,6 +1,7 @@
 body{
-    font-family:'Open Sans';
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
     color: rgba(0,0,0,0.8);
+    margin: 0px;
 }
 
 img{
@@ -87,5 +88,58 @@ img{
         font-size: 14px;
         margin: 0px 5px 5px 5px;
     }
+
+}
+
+/* teste 2 */
+
+#header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #F40009;
+    font-family:'Open Sans';
+    color: white;
+}
+
+#menuHolder{
+max-height: 80px;
+max-width: 80px;
+height: 50px;
+cursor: pointer;
+width: 50px;
+margin: 30px 50px;
+background-image: url('https://icon-library.net/images/white-hamburger-menu-icon/white-hamburger-menu-icon-1.jpg');
+background-repeat: no-repeat;
+background-size: contain;
+background-position: 50% 50%;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+
+}
+
+.searchContainer>input{
+    border-radius: 25px;
+    min-height: 50px;
+    min-width: 300px;
+    border-style: none;
+    outline: none;
+    padding: 0px 25px;
+    font-size: 16px;
+
+    
+}
+
+.searchButton{
+    height: 50px;
+    width: 50px;
 
 }
