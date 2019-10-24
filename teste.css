@@ -1,39 +1,55 @@
-body{
-    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
-    color: rgba(0,0,0,0.8);
+body {
+    font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: rgba(0, 0, 0, 0.8);
     margin: 0px;
+    height: 100vh;
+    /* overflow: hidden; */
 }
 
-img{
-        border-radius: 25px;
+body::after {
+    content: "";
+    background: url("./assets/Coca-Cola_logo.svg") no-repeat;
+    background-position: center 60%;
+    background-size: 60%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
+
+img {
+    border-radius: 25px;
+}
+
 .painel {
     display: flex;
     flex-flow: nowrap;
     justify-content: space-around;
 }
 
-.container{
+.container {
     margin: 60px 0;
     width: 500px;
     height: 500px;
 }
 
-.rotation{
-    cursor: all-scroll  ;
+.rotation {
+    cursor: all-scroll;
     height: 100% !important;
     max-width: 100% !important;
     margin: auto;
 
 }
 
-.rotation > img{
+.rotation>img {}
 
-}
-.caixao{
+.caixao {
     width: 200px;
     cursor: pointer;
-    border: 2px solid rgba(255,0,0,0.6);
+    border: 2px solid rgba(255, 0, 0, 0.6);
     background: none;
     border-radius: 25px;
     padding: 5px;
@@ -44,19 +60,19 @@ img{
     transition: .2s ease;
 }
 
-.caixao:hover{
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
-    background: rgba(255,0,0,0.3);
+.caixao:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+    background: rgba(255, 0, 0, 0.3);
 }
 
-.caixao:focus{
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
-    background: rgba(255,0,0,.5);
-    outline:0;
+.caixao:focus {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+    background: rgba(255, 0, 0, .5);
+    outline: 0;
 }
 
 
-.caixa > img{
+.caixa>img {
     max-width: 100px;
     /* border: 2px solid rgba(255,0,0,0.6); */
     border-radius: 25px;
@@ -65,7 +81,7 @@ img{
     max-height: 100px;
 }
 
-.caixa > h2{
+.caixa>h2 {
     margin: 0px 10px 10px 10px;
     text-transform: uppercase;
     font-size: 16px;
@@ -73,18 +89,20 @@ img{
 }
 
 @media (max-width: 1400px) {
-    .container{
+    .container {
         width: 400px;
         height: 400px;
     }
-    .caixao{
-        width:150px;
+
+    .caixao {
+        width: 150px;
     }
 
-    .caixa > img{
+    .caixa>img {
         max-width: 75px;
     }
-    .caixa > h2{
+
+    .caixa>h2 {
         font-size: 14px;
         margin: 0px 5px 5px 5px;
     }
@@ -93,53 +111,119 @@ img{
 
 /* teste 2 */
 
-#header{
+#header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    align-content: space-around;
     align-items: center;
     height: 100px;
     width: 100%;
     background-color: #F40009;
-    font-family:'Open Sans';
+    font-family: 'Open Sans';
+    font-size: 24px;
     color: white;
 }
 
-#menuHolder{
-max-height: 80px;
-max-width: 80px;
-height: 50px;
-cursor: pointer;
-width: 50px;
-margin: 30px 50px;
-background-image: url('https://icon-library.net/images/white-hamburger-menu-icon/white-hamburger-menu-icon-1.jpg');
-background-repeat: no-repeat;
-background-size: contain;
-background-position: 50% 50%;
+#menuHolder {
+    max-height: 80px;
+    max-width: 80px;
+    height: 50px;
+    cursor: pointer;
+    width: 50px;
+    margin: 30px 50px;
+    background-image: url('https://icon-library.net/images/white-hamburger-menu-icon/white-hamburger-menu-icon-1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
 }
 
-.searchContainer{
+.searchContainer {
     display: flex;
     align-items: center;
-justify-content: space-between;
-
+    justify-content: space-between;
 }
 
-.searchContainer>input{
-    border-radius: 25px;
+.searchContainer>input {
+    border-radius: 25px 0px 0px 25px;
     min-height: 50px;
-    min-width: 300px;
+    min-width: 150px;
     border-style: none;
     outline: none;
     padding: 0px 25px;
     font-size: 16px;
-
-    
+    z-index: 150;
 }
 
-.searchButton{
+.searchContainer>button {
+    text-align: center;
+    cursor: pointer;
+    width: 50px;
+    padding-right: 12px;
+    margin-right: 50px;
+    color: white !important;
+    border: 2px solid white;
+    border-radius: 0px 25px 25px 0px;
+    transition: .2s ease;
+}
+
+.searchContainer>button:hover {
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.searchButton {
     height: 50px;
     width: 50px;
+    background: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
 
+
+
+#mainSection>button {
+    padding: 20px 50px;
+    width: 100vw;
+    text-align: left;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s ease;
+    background-color: #ffc4c4;
+    font-family: 'Open Sans';
+}
+
+#mainSection>button:hover {
+    background: rgb(255, 69, 69) !important;
+}
+
+#mainSection>button:nth-child(odd) {
+    background: rgb(255, 221, 221);
+
+}
+
+#mainSection>button>p {
+    color: white;
+}
+
+#mainSection>.readMore {
+    font-weight: bold;
+    text-align: center;
+}
+
+#mainSection>button:not(.is-visible) {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+}
+
+.is-active{
+    display: block;
+}
+
+.is-hidden {
+    display: none;
 }
