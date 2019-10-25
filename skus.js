@@ -3,7 +3,7 @@ var skus_string = "Dunkin Donuts Cookies & Cream Iced Coffee,Dunkin Donuts Espre
 var sku_array = skus_string.split(',');
 
 document.addEventListener("DOMContentLoaded",populateSection());
-document.addEventListener("DOMContentLoaded",elSetup());
+// document.addEventListener("DOMContentLoaded",elSetup());
 
 function populateSection(){
     
@@ -17,6 +17,7 @@ function populateSection(){
     sku_array.forEach(fulano => {
         //cria e parenta os elementos
         let newElement = document.createElement("button");
+        fulano = fulano.replace(/\-/g,'');
 
         // newElement.href = '#' + element.replace(/\s/g, "");
         // let childElement = document.createElement("p");
