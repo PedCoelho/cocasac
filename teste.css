@@ -3,7 +3,7 @@ body {
     color: rgba(0, 0, 0, 0.8);
     margin: 0px;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 
 body::after {
@@ -122,6 +122,8 @@ img {
     font-family: 'Open Sans';
     font-size: 24px;
     color: white;
+    position: sticky;
+    top: 0;
 }
 
 #menuHolder {
@@ -179,7 +181,13 @@ img {
     border: none;
 }
 
+#mainSection{
+    transition: all .2s ease;
+}
 
+#mainSection:not(.is-visible){
+    opacity: 0;
+}
 
 #mainSection>button {
     padding: 20px 50px;
@@ -198,9 +206,8 @@ img {
     background: rgb(255, 69, 69) !important;
 }
 
-#mainSection>button:nth-child(odd) {
+#mainSection > button.odd {
     background: rgb(255, 221, 221);
-
 }
 
 #mainSection>button>p {
@@ -212,9 +219,9 @@ img {
     text-align: center;
 }
 
-#mainSection>button:not(.is-visible) {
+/* #mainSection>button:not(.is-visible) {
     display: none;
-}
+} */
 
 .is-visible {
     display: block;
@@ -224,6 +231,11 @@ img {
     display: block;
 }
 
-.is-hidden {
+.readVisible{
+    display: block!important;
+}
+
+#mainSection > button:not(.is-visible){
     display: none;
 }
+
